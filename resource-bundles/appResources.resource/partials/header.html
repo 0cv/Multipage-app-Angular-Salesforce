@@ -1,0 +1,13 @@
+<div style="position: relative; width: 100%;text-align:center">
+	<span>
+        <input class="btn" type="button" value="Accounts" ng-click="goToView1()" />
+	</span>
+	<span>
+		<input class="btn" type="button" value="Contacts" ng-click="goToView2()" />
+	</span>
+	<span>
+		<input class="btn" type="button" value="view 3 (without sidebar)" ng-click="goToView3()" />
+	</span>
+</div>
+<div ui-view="sidebar"></div>
+<div ui-view="other"></div>

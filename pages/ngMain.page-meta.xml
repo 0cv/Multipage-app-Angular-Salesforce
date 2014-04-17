@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>29.0</apiVersion>
+    <label>ngMain</label>
+    <packageVersions>
+        <majorNumber>2</majorNumber>
+        <minorNumber>27</minorNumber>
+        <namespace>CRMfusionDBR101</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>4</majorNumber>
+        <minorNumber>13</minorNumber>
+        <namespace>sf4twitter</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>1</majorNumber>
+        <minorNumber>6</minorNumber>
+        <namespace>sf_chttr_apps</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>1</majorNumber>
+        <minorNumber>93</minorNumber>
+        <namespace>skyvvasolutions</namespace>
+    </packageVersions>
+</ApexPage>

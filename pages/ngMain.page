@@ -1,0 +1,50 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false" controller="ngMainController"  >
+<!-- -->
+<html>
+    <head>
+        <title>Visualforce Page Application</title>
+        <script src="{!URLFOR($resource.appResources, 'libraries/require.min.js')}"></script>
+                 
+        <script>
+            require.config({
+                baseUrl: "{!$resource.appResources}",
+                paths: {
+                    'angular'               : 'libraries/angular.min',
+                    'angular-ui-router'     : 'libraries/angular.ui-router',
+                    'angular-animate'       : 'libraries/angular.animate.min',
+                    'angular-couch-potato'  : 'libraries/angular-couch-potato',
+                    'views'                 : 'partials'
+                },
+                shim: {
+                    'angular': {
+                        exports: 'angular'
+                    },
+                    'angular-ui-router': {
+                        deps: ['angular']
+                    },
+                    'angular-animate': {
+                        deps: ['angular']
+                    }
+                }
+            });
+
+            // run is required to force the app to run, not because we need to interact
+            // with it.  Anything required here will by default be combined/minified by
+            // r.js if you use it.
+            require(['app', 'angular', 'app-init', 'controllers/main', 'services/http'], function(app, angular) {
+                console.log('in ngMain.page');
+                angular.element(document).ready(function() {
+                    angular.bootstrap(document, [app['name']]);
+                });
+            });
+        </script> 
+
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="{!URLFOR($resource.appResources, 'css/main.css')}" rel="stylesheet" />
+    </head>
+
+    <body >
+        <div ui-view="main" style="position:relative;"></div>
+    </body>
+</html>
+</apex:page>
